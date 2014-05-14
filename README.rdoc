@@ -1,0 +1,2 @@
+== README
+GMS club website
