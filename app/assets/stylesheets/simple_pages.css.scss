@@ -1,0 +1,127 @@
+// Place all the styles related to the SimplePages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+
+/* universal */
+
+$lightGray: #999;
+$gray: #555;
+$grayDarker: #222;
+$grayMediumLight: #eaeaea;
+
+html {
+	overflow-y: scroll;
+	
+}
+
+body {
+	padding-top: 60px;
+
+}
+section {
+	overflow: auto;
+}
+
+textarea{
+	resize: vertical;
+
+}
+
+.center{
+	text-align: center;
+	h1 {
+		margin-bottom: 10px;
+	}
+	
+}
+
+.back{
+	background-image:url('gplaypattern_@2X.png');
+}
+/* typography */
+@font-face{
+	font-family: headingFont;
+	src: url("//fonts.googleapis.com/css?family=Montserrat:400,700")
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  font-family: headingFont;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+ 
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #FF1919;
+}
+
+p {
+  font-family: Baskerville, Serif;
+  font-size: 1.3em;
+  line-height: 1.7em;
+  text-align: justify;
+  
+}
+
+
+/*footer*/
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $lightGray;
+  
+  a {
+  	color: $gray;
+  	&:hover {
+		color: $grayDarker;
+  	}
+  }			
+  small{
+ 	float: left;
+    color: $grayDarker;
+  }
+
+  ul {
+  	float: right;
+  	list-style: none;
+	li {
+		float: left;
+		margin-left: 10px;
+	}
+  }
+
+}
+
+.carousel-control{
+	width: 5%;
+}
+
+.admin{
+    background-color: #efefef;
+    border-bottom: 1px solid #dbdbdb;
+	
+	h2{
+	 	color: #393c3d;
+    	font-size: 24px;
+	}
+	
+	p{
+		font-size: 15px;
+    	margin-bottom: 13px; 
+	
+	}
+}
+

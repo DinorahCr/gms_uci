@@ -1,0 +1,62 @@
+<% provide(:title, 'Home')%>
+
+<div id ="home-carousel" class="carousel slide" data-ride="carousel" data-interval=10000 data-pause="hover" data-wrap= "true">
+		<ol class= "carousel-indicators">
+			<li data-target="#home-carousel" data-slide-to= "0" class = "active"></li>
+			<li data-target="#home-carousel" data-slide-to="1"></li>
+			<li data-target="#home-carousel" data-slide-to="2"></li>
+		</ol>
+		
+		<div class = "carousel-inner">
+			<div class = "container">
+			<div class = "carousel-caption">
+			<h1>Gates Millennium Scholars Association</h1>
+		    <h4>at University of California, Irvine</h4>
+			</div>
+			</div>
+		  
+		    <div class = "item active">
+			    <%= image_tag('gms2013.jpg', :class => "img-responsive" )  %>		
+	    	</div>
+				
+			<div class = "item">
+				<%= image_tag("gmsuci.jpg", alt: "GMS group", :class => "img-responsive" )%>
+				<!--  asset_path('logo.png')-->
+			</div>
+				
+				<div class = "item">
+					<%= image_tag("anteaterintree.jpg", :class => "img-responsive") %>
+				</div>
+		</div>
+   	   <a class="carousel-control left" href="#home-carousel" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left"></span>
+	  	</a>
+	  	<a class="carousel-control right" href="#home-carousel" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right"></span>
+	  	</a>
+ </div>
+
+ <div class="container">
+    <div class="row">
+      
+		<div class="col-md-4">
+        <h2>What is GMS? </h2>
+        <p> The Gates Millennium Scholars program is a prestigious scholarship funded by a grant from the Bill & Melinda Gates Foundation, with the goal to support under represented students who have shown academic excellence and promising leadership skills. Recipients are awarded both economic and academic support as well as many other opportunities. </p>
+        <p> <%= link_to "Click here for more information", "http://www.gmsp.org/", :class => "btn btn-default" %>      </p>
+       </div>
+      
+		<div class="col-md-4">
+        	<h2>About Us</h2>
+        	<p> GMS@UCI is a unique student organization on campus comprised entirely of Gates Millennium Scholars who are committed to community service and academic excellence. The organization will serve to provide support and resources for our Scholars to carry out their goals and mission. </p>
+       		</p>
+     	</div>
+
+      	<div class="col-md-4">
+        	<h2> What are we doing right now? </h2>
+			<p> Meetings are held at _____ every ____ </p>
+			<p> Join our <%= link_to "Facebook", "#" %> group and connect with other scholars! </p>
+      	</div>
+	
+	</div>
+</div>
+
