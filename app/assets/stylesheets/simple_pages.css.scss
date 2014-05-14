@@ -13,6 +13,11 @@ $grayMediumLight: #eaeaea;
 
 html {
 	overflow-y: scroll;
+	background: url(gplaypattern.png) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	
 }
 
@@ -40,6 +45,7 @@ textarea{
 .back{
 	background-image:url('gplaypattern_@2X.png');
 }
+
 /* typography */
 @font-face{
 	font-family: headingFont;
