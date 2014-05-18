@@ -1,0 +1,14 @@
+
+<% @events.each do |event| %>
+	<div class = "panel panel-default">
+    <div class = "panel-heading"> 
+	<div class = "panel-title"> <%= event.title %> </div>
+    </div>
+    <div class = "panel-body"><%= event.body %></div>
+	<div class = "panel-footer">
+    <%= link_to 'Show', event %>
+	<%= link_to 'Edit', edit_event_path(event), remote: true %> 
+    <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+	</div>
+	</div>
+<% end %>
