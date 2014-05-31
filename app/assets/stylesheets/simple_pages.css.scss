@@ -42,7 +42,9 @@ textarea{
 }
 
 .back{
-	background-image:url("congruent_pentagon.png");
+/* 	background-image:url("red.jpg");
+	background-repeat: stretch;
+	*/
 }
 
 /* typography */
@@ -65,8 +67,8 @@ h2 {
   font-size: 1.8em;
   margin-bottom: 30px;
   text-align: center;
-  font-weight: normal;
-  color: #FF1919;
+  font-weight: bold;
+  color: #666;
 }
 
 p {
@@ -74,6 +76,7 @@ p {
   font-size: 1.3em;
   line-height: 1.7em;
   text-align: justify;
+  color: #666;
   
 }
 
@@ -132,8 +135,10 @@ footer {
      position: relative;
 	 left:290px;
 	 width: 50%;
-	 box-shadow: 0px 0px 3px 3px #D8FEF0;
-	
+	 border: 2px solid #ccc;
+	 border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+	 /* box-shadow: 0px 0px 3px 3px #D8FEF0; */
+
 	
 	.panel-default {
  
@@ -157,5 +162,18 @@ footer {
 	}
 	.panel-footer {
 	   padding: 2px;
+	   background-color: #F8F8F8;
 	}
 }
+
+.thumbnail {
+    position: relative;
+	top: 10px;
+	border: 2px solid #dddddd;
+	
+	p {
+		font-size: 1.2em;
+		text-align: left;
+	}
+}
+
