@@ -1,29 +1,25 @@
 <% provide(:title, 'Events')%>
-<ul class="nav nav-tabs">
-  <li class="active"><a href="#home" data-toggle="tab">List</a></li>
-  <li><a href="#calendar" data-toggle="tab">Calendar</a></li>
-  <li><a href="#gmsp" data-toggle="tab">GMSP Sponsored Events + Updates</a></li>
-</ul>
 
-<div class="tab-content">
-  <div class="tab-pane" id="calendar"></div>
-  <div class="tab-pane" id="gmsp"> <a href = "https://www.facebook.com/groups/GMSSoCalRegion/"> Join the SoCal Facebook group </a> </div>
+<%= tabs_tag :open_tabs => {:class => "nav nav-tabs" } do |tab| %>
+  <%= tab.elist     'List', events_path, :class => "active" %>
+  <%= tab.ecalendar 'Calendar', calendar_path %>
+<% end %>
 
-</div>
+
+
 
 <div class = "page header">
 <h1>Events</h1>
 </div>
-   		<div class = "event-all">
-		<%= render 'index'%>
-		</div>
-
+   	
+		<%= render 'index' %>
 <br>
 
-
-<%= link_to 'New Event', new_event_path, remote: true %>
+<%= link_to "Add Event", new_event_path, remote: true %>
 <div id = "event-modal" class = "modal fade"> 
 <div class = "modal-dialog">
-<div id = "inner-event" class = "modal-content"></div>	
+<div id = "inner-event" class = "modal-content">
+</div>	
 </div>	
 </div>
+

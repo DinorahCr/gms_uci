@@ -4,7 +4,11 @@
 <ul class = "errors"> </ul>
 <button class="close" data-dismiss="modal" aria-hidden = "true">&times;</button> 
 <span class="help-block">
- <%= f.text_field :title, :class =>"form-control", :placeholder => "Event Title"%>
+ <%= f.text_field :title, :class =>"form-control", :placeholder => "Event Title" %>
+ <%= f.text_field :date, :class => 'form-control', :placeholder => "Insert date: year-month-day. Ex: 2014-04-20", :type => "date" %>
+<input class="form-control" id="event_times" name="event[times]" placeholder="Insert start time and end time. Ex:10am 10pm" type="text">
+ <%# had to do the non rails ^ version because if used the commented out it will automatically asign a value "" which replaces the placeholder <%= f.text_field :times, :class => "form-control", :placeholder => "Insert start time and end time Ex:10am 10pm" %>
+ 
 </span>
 
 <div class = "modal-body">
@@ -14,7 +18,6 @@
 <div class = "modal-footer">
  <%= submit_tag "Save", class: "form_submit" , :class => "btn btn-default", data:{ disable_with: 'Submitting...' }%>
 </div>
-
 
 <% end %>
 

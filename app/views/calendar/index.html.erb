@@ -1,0 +1,10 @@
+<!-- Probably move the stylesheet to your layout. Also make sure you include the javascript. -->
+
+<% provide(:title, "Calendar") %>
+<%= tabs_tag :open_tabs => {:class => "nav nav-tabs" } do |tab| %>
+  <%= tab.elist     'List', events_path  %>
+  <%= tab.ecalendar 'Calendar', calendar_path , :class => "active"%>
+<% end %>
+<h1>Calendar</h1>
+
+<%= raw(event_calendar)%>

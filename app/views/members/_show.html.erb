@@ -1,0 +1,13 @@
+<%= form_for @member, remote: true, html:{ class: "form-horizontal"} do |f| %>
+	
+<button class="close" data-dismiss="modal" aria-hidden = "true">&times;</button> 
+	<div class="media">
+	 <div class = "pull-left">
+	 	<%= image_tag @member.image_url(:thumb).to_s , :class => "img-thumbnail" %>
+	</div>    	
+	<div class="media-body">	     
+ 		<h3 class = "media-heading"> <%= @member.name %> </h3>
+    	<p>  <%= @member.body %> </p>
+	</div>
+	</div>
+<% end %>

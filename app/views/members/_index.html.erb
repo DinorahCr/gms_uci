@@ -1,0 +1,18 @@
+<% @members.each do |member| %>
+ 
+   	 <div class= "col-xs-6 col-md-3">
+		<div class="thumbnail">
+			 <%= image_tag member.image.thumb.url, :class => "img-thumbnail" %>  
+		    	
+		<div class="caption">	     
+		 	<h4> <%= member.name %> </h4>
+		    <p> <%= truncate member.body, length: 100 %>
+			<%= link_to 'Read More', member, remote: true , :class => "btn btn-link" %>  
+			</p>	
+ 	   </div>
+			<%= link_to 'Edit', edit_member_path(member), remote: true, :class => "btn btn-link" %>
+        	<%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-link" %>
+     </div>
+  </div>
+
+<% end %>

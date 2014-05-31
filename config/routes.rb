@@ -1,14 +1,14 @@
 GmsUci::Application.routes.draw do
-  resources :members
   resources :events
-
+  resources :members 
+ 
+  #nests events withint the activities
   #get 'events/new', to: 'events#new', :as => :new_release
   root 'simple_pages#home'
   match '/contact', to: 'simple_pages#contact', via: 'get'
   match '/events', to: 'events#index', via: 'get'
   match '/members', to: 'members#index', via: 'get'
-  
-  
+  match '/calendar(/:year(/:month))', to: 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}, via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

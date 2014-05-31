@@ -1,16 +1,17 @@
-
 <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Title:</strong>
   <%= @event.title %>
 </p>
-
 <p>
-  <strong>Body:</strong>
+	<strong> When: </strong>
+	<%= format_date(@event.start_at) %> from <%= format_times(@event.start_at) %> - <%= format_times(@event.end_at)%>
+</p>
+<p>
+  <strong>Description:</strong>
   <%= @event.body %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> 
 <%= link_to 'Back', events_path %> 
  
