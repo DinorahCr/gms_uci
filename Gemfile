@@ -3,6 +3,12 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.5'
 gem 'bootstrap-sass', '~> 3.1.1.1'
 gem 'sprockets', '2.11.0'
+gem 'event-calendar', :require => 'event_calendar'
+gem "tabs_on_rails"
+gem 'carrierwave'
+gem 'rmagick', :require => 'RMagick'
+gem 'carrierwave-crop'
+gem 'jcrop-rails-v2'
 
 group :development, :test do 
   gem 'sqlite3', '1.3.9'
