@@ -11,9 +11,10 @@
 <div class = "modal fade" id = "crop-modal">
 <div class="modal-content">
 <%= form_for @member, html:{ class: "form-horizontal"}, remote: true do |f| %>
+    
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title"> Crop photo if you would like otherwise just exit </h4>
+        <h4 class="modal-title"> Crop photo </h4>
       </div>
    
 	<div class="modal-body">
@@ -25,7 +26,7 @@
 	<div class="modal-footer">
         <%= f.submit %>	
     </div>
-
+    
 	</div>
    </div>
 <% end %>
