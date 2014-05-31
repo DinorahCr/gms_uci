@@ -1,11 +1,13 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate, except: [:index, :show] 
   respond_to :html, :js
+  
   
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all(:order => "created_at DESC")
+    @events = Event.order('date DESC').all
   end
 
   # GET /events/1
@@ -17,9 +19,9 @@ class EventsController < ApplicationController
   end
 
   # GET /events/new
-  def new
-    @event = Event.new
-  end
+ def new
+   @event = Event.new
+ end
 
   # GET /events/1/edit
   def edit
@@ -29,7 +31,8 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    @event = Event.create(event_params)
+     @event = Event.new(event_params)
+   
     respond_to do |format|
           if @event.save
               format.html 
@@ -57,18 +60,23 @@ class EventsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_event
       @event = Event.find(params[:id])
     end
    
-
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # Never trust parameters from the scary internet, only allow the white list through. :activity_id,
+    
     def event_params
-      params.require(:event).permit(:title, :body)
+      params.require(:event).permit(:title, :date, :times, :start_at, :end_at, :body)
     end
     
+    def authenticate 
+        authenticate_or_request_with_http_basic do |name, password|
+          name = "admin" && password = "secret"
+        end
+      end
     
 end
