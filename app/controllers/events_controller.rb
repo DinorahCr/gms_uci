@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   before_action :authenticate, except: [:index, :show] 
   respond_to :html, :js
-  
+  #layout :admin_layout 
   
   # GET /events
   # GET /events.json
@@ -78,5 +78,9 @@ class EventsController < ApplicationController
           name = "admin" && password = "secret"
         end
       end
+    
+    #def admin_layout 
+      #"admin"
+    #end 
     
 end
