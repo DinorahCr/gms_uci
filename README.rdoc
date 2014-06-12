@@ -1,2 +1,4 @@
-== README
 GMS club website
+
+Ruby on Rails, unobstrusive Javascript, SASS/CSS. 
+Need to modify some layouts. And add accounts for others.
