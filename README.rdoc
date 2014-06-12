@@ -2,3 +2,6 @@ GMS club website
 
 Ruby on Rails, unobstrusive Javascript, SASS/CSS. 
 Need to modify some layouts. And add accounts for others.
+
+Temporarily hosted at http://gmsa-uci.herokuapp.com/
+(until school year starts)
